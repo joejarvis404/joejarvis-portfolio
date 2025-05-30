@@ -61,21 +61,22 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     transition: transform 0.3s;
 }
-    }
-    .card:hover {
-      transform: scale(1.03);
-    }
-    .card img {
-      width: 100%;
-      display: block;
-    }
-    .card-content {
-      padding: 1rem;
-    }
-    .card-content h3 {
-      margin-bottom: 0.5rem;
-      color: #ff5c5c;
-    }
+    .card {
+  background: #1c1c1c;
+  border-radius: 0;
+  overflow: visible; /* Allow scale to show beyond the bounds */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+  transform-origin: center;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+.card img {
+  display: block;
+  width: 100%;
+  transition: transform 0.3s;
+}
     footer {
       text-align: center;
       font-size: 0.9rem;
