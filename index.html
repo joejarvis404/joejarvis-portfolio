@@ -13,6 +13,39 @@
   color: #fff;
   line-height: 1.6;
 }
+    .thumbnail-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.thumbnail-wrapper img {
+  width: 100%;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+.thumbnail-wrapper:hover img {
+  filter: grayscale(100%) brightness(60%);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(15, 15, 15, 0.8);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.thumbnail-wrapper:hover .overlay {
+  opacity: 1;
+}
+
     header, section, footer {
       padding: 2rem;
       max-width: 1200px;
@@ -126,14 +159,17 @@
   <br>
   <div class="grid grid-3">
     <div class="card">
-      <a href="https://www.youtube.com/watch?v=ufhRcKwE01w" target="_blank">
-        <img src="thumbnails/a-wolf-at-the-door-thumbnail.jpg" alt="Film 1">
-      </a>
+  <div class="thumbnail-wrapper">
+    <img src="thumbnails/a-wolf-at-the-door-thumbnail.jpg" alt="A Wolf at the Door">
+    <div class="overlay">
+      <p>A Wolf at the Door | Narrative Short | 2024</p>
     </div>
     <div class="card">
-      <a href="https://www.youtube.com/watch?v=0eD3CeJoXms&t=2s" target="_blank">
-        <img src="thumbnails/buried-exposure-thumbnail.jpg" alt="Film 2">
-      </a>
+  <div class="thumbnail-wrapper">
+    <img src="thumbnails/buried-exposure-thumbnail.jpg" alt="Buried Exposure">
+    <div class="overlay">
+      <p>Buried Exposure | Narrative Short | 2025</p>
+    </div>
     </div>
     <!-- Add more film cards here in the same format -->
   </div>
